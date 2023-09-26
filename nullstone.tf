@@ -23,6 +23,8 @@ locals {
   atlas_project_id     = data.ns_connection.mongo.outputs.atlas_project_id
   atlas_public_key     = data.ns_connection.mongo.outputs.atlas_public_key
   atlas_private_key    = data.ns_connection.mongo.outputs.atlas_private_key
+  db_protocol          = data.ns_connection.mongo.outputs.db_protocol
+  db_port              = data.ns_connection.mongo.outputs.db_port
   db_endpoint          = data.ns_connection.mongo.outputs.db_endpoint
   db_security_group_id = data.ns_connection.mongo.outputs.db_security_group_id
   db_admin_secret_id   = data.ns_connection.mongo.outputs.db_admin_secret_id
