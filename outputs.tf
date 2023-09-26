@@ -25,6 +25,5 @@ output "secrets" {
 }
 
 locals {
-  db_protocol = split("://", local.db_endpoint)[0]
   db_host     = split("://", local.db_endpoint)[1]
 }
