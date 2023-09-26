@@ -1,0 +1,15 @@
+org_name: nullstone
+name: aws-mongo-atlas-access
+friendly_name: MongoDB Access
+description: Capability to connect your application to a MongoDB database hosted on Atlas.
+category: capability
+subcategory: datastores
+provider_types:
+  - aws
+platform: mongo
+subplatform: atlas
+type: ""
+appCategories:
+  - container
+  - serverless
+is_public: true
