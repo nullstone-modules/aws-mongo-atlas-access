@@ -3,6 +3,10 @@ terraform {
     ns = {
       source = "nullstone-io/ns"
     }
+    mongodbatlas = {
+      source  = "mongodb/mongodbatlas"
+      version = "1.11.1"
+    }
   }
 }
 
