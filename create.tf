@@ -1,12 +1,12 @@
-resource "mongodbatlas_database_user" "test" {
+resource "mongodbatlas_database_user" "this" {
+  project_id         = local.atlas_project_id
   username           = local.username
   password           = random_password.this.result
-  project_id         = local.atlas_project_id
   auth_database_name = "admin"
 
   roles {
     role_name     = "readWrite"
-    database_name = var.database_name
+    database_name = local.database_name
   }
 
   roles {
