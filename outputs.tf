@@ -19,7 +19,12 @@ output "secrets" {
     },
     {
       name  = "MONGO_URL"
-      value = "mongodb://${urlencode(local.username)}:${urlencode(random_password.this.result)}@${local.db_endpoint}/${urlencode(local.database_name)}"
+      value = "${local.db_protocol}://${urlencode(local.username)}:${urlencode(random_password.this.result)}@${local.db_host}/${urlencode(local.database_name)}"
     }
   ]
+}
+
+locals {
+  db_protocol = split("://", local.db_endpoint)[0]
+  db_host     = split("://", local.db_endpoint)[1]
 }
