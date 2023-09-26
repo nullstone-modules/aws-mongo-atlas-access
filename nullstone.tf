@@ -16,6 +16,8 @@ data "ns_connection" "mongo" {
 
 locals {
   atlas_project_id     = data.ns_connection.mongo.outputs.atlas_project_id
+  atlas_public_key     = data.ns_connection.mongo.outputs.atlas_public_key
+  atlas_private_key    = data.ns_connection.mongo.outputs.atlas_private_key
   db_endpoint          = data.ns_connection.mongo.outputs.db_endpoint
   db_port              = split(":", local.db_endpoint)[1]
   db_security_group_id = data.ns_connection.mongo.outputs.db_security_group_id
